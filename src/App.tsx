@@ -153,7 +153,7 @@ export default function App() {
         {/* Welcome Section */}
         <div className="mb-8">
           <h2 className="text-3xl font-black text-slate-900 dark:text-white">Comparación presupuestal interanual</h2>
-          <p className="text-slate-500 dark:text-slate-400 mt-1">Comparación basado en las información de Consulta Amigable del MEF</p>
+          <p className="text-slate-500 dark:text-slate-400 mt-1">Comparación usando información de Consulta Amigable del MEF</p>
         </div>
 
         {/* Search / Input Section */}
@@ -202,9 +202,12 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">
-                    Devengado Actual ({apiData.yearActual})
-                  </span>
+                  <div>
+                    <span className="text-sm font-medium text-slate-500 uppercase tracking-wider block">
+                      Devengado Actual ({apiData.yearActual})
+                    </span>
+                    <span className="text-[10px] text-slate-400 uppercase font-bold">(Millones de S/)</span>
+                  </div>
                   <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                     <Calendar className="w-5 h-5 text-blue-600" />
                   </div>
@@ -216,9 +219,12 @@ export default function App() {
 
               <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">
-                    Devengado Anterior ({apiData.yearAnterior})
-                  </span>
+                  <div>
+                    <span className="text-sm font-medium text-slate-500 uppercase tracking-wider block">
+                      Devengado Anterior ({apiData.yearAnterior})
+                    </span>
+                    <span className="text-[10px] text-slate-400 uppercase font-bold">(Millones de S/)</span>
+                  </div>
                   <div className="p-2 bg-slate-50 dark:bg-slate-800 rounded-lg">
                     <History className="w-5 h-5 text-slate-600" />
                   </div>
@@ -230,9 +236,12 @@ export default function App() {
 
               <div className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-primary/5 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-slate-500 uppercase tracking-wider">
-                    Variación Total
-                  </span>
+                  <div>
+                    <span className="text-sm font-medium text-slate-500 uppercase tracking-wider block">
+                      Variación Total
+                    </span>
+                    <span className="text-[10px] text-slate-400 uppercase font-bold">(Millones de S/)</span>
+                  </div>
                   <div className={`p-2 rounded-lg ${totalVariacionS >= 0 ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'bg-rose-50 dark:bg-rose-900/20'}`}>
                     <TrendingUp className={`w-5 h-5 ${totalVariacionS >= 0 ? 'text-emerald-600' : 'text-rose-600'}`} />
                   </div>
