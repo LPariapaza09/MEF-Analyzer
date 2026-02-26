@@ -1,0 +1,5 @@
+{
+  "name": "MEF Data Analyzer",
+  "description": "Aplicación web para comparar ejecución presupuestal interanual usando datos de Consulta Amigable del MEF.",
+  "requestFramePermissions": []
+}
